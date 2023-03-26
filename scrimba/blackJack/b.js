@@ -17,13 +17,15 @@ let msgEl = document.getElementById("msg-el");
 let sumEl = document.querySelector("#sum-el");
 let cardEl = document.getElementById("card-el");
 
-let playerName = 'Per';
-let PlayerChips = 145;
+let player = {
+    name:'Per',
+    chips: 145
+}
 
 let playerEl = document.getElementById("player-el");
-playerEl.textContent = playerName + ": $" + PlayerChips;
+playerEl.textContent = player.name + ": $" + player.chips;
 
-function startGame(){
+function startGame() {
     isAlive = true;
     let fCard = getRandomCard();
     let sCard = getRandomCard();
@@ -39,40 +41,40 @@ function renderGame() {
     for (let i = 0; i < card.length; i++) {
         cardEl.textContent += card[i] + " "
     }
-   
-    if(sum < 21) {
+
+    if (sum < 21) {
         msg = "Do you want to draw a new card?";
-    }else if(sum === 21) {
+    } else if (sum === 21) {
         msg = "You've got Blackjack!";
         hasBlackJack = true;
-    }else {
+    } else {
         msg = "You're out of the game!";
         isAlive = false;
     }
     sumEl.textContent = "Sum: " + sum;
-   
+
     msgEl.textContent = msg;
 }
- 
+
 function newCard() {
-    if(isAlive === true && hasBlackJack === false) {
+    if (isAlive === true && hasBlackJack === false) {
         let nCard = getRandomCard();
         sum += nCard;
         card.push(nCard);
         renderGame();
         console.log(card)
     }
-    
+
 }
 
-function getRandomCard(){
-    let random = Math.floor(Math.random() * 13)+1;
-    if(random === 1){
+function getRandomCard() {
+    let random = Math.floor(Math.random() * 13) + 1;
+    if (random === 1) {
         return 11;
-    }else if(random > 10) {
+    } else if (random > 10) {
         return 10;
-    }else {
+    } else {
         return random;
     }
-    
+
 }
