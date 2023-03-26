@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>binding</title>
+    <script src="./binding.js"></script>
+    <style>
+        #todos li button{
+            margin-left: 30px;
+            margin-top: 7px;
+        }
+    </style>
+</head>
+
+<body>
+    <input id="todo" type="text">
+    <button id="btntodo">Add new todo</button>
+
+
+    <ul id="todos">
+        <li>milk <button onclick="onDlete(event)">Delete</button></li>
+        <li>cake <button onclick="onDlete(event)">Delete</button></li>
+        <li>food <button onclick="onDlete(event)">Delete</button></li>
+    </ul>
+
+</body>
+
+</html>

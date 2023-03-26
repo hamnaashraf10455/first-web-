@@ -1,0 +1,36 @@
+body{
+    background-image: url(station.jpeg);
+    background-size: cover;
+    text-align: center;
+
+}
+
+h1, h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+button {
+    width: 200px;
+    height: 60px;
+    border-radius: 5px;
+    color: white;
+    font-size: x-large;
+    border: none;
+    margin: 5px;
+}
+
+#iBtn {
+    background-color: darkred;
+}
+
+#iBtn:hover{
+    background-color: rgb(108, 13, 13);
+}
+#save-btn {
+    background-color: darkgreen;
+}
+
+#save-btn:hover{
+    background-color: rgb(14, 84, 16);
+}
