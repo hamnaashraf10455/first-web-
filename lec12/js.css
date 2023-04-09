@@ -1,0 +1,19 @@
+.user{
+    margin: 15px;
+    border-bottom: 4px dotted dodgerblue;
+}
+
+#del{
+    float: right;
+    margin-right: 2px;
+
+}
+#edit{
+    float: right;
+    margin-right: 2px;
+    
+}
+
+.container{
+    margin-left: 5px;
+}
